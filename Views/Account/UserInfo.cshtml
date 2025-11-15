@@ -1,0 +1,23 @@
+@model SportsStore.Models.ViewModels.UserInfoViewModel
+@{
+    ViewData["Title"] = "Thông tin người dùng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Tên đăng nhập:</dt>
+            <dd class="col-sm-9">@Model.UserName</dd>
+
+            <dt class="col-sm-3">Email:</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+
+            <dt class="col-sm-3">Vai trò:</dt>
+            <dd class="col-sm-9">@Model.Role</dd>
+        </dl>
+    </div>
+</div>
+
+<a href="/" class="btn btn-secondary mt-3">Quay lại trang chủ</a>

@@ -1,0 +1,37 @@
+@model List<SportsStore.Models.ViewModels.UserInfoViewModel>
+@{
+    ViewData["Title"] = "Danh sách người dùng";
+}
+
+<h2 class="text-primary mb-3">@ViewData["Title"]</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Tên đăng nhập</th>
+                <th>Email</th>
+                <th>Vai trò</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].UserName</td>
+                    <td>@Model[i].Email</td>
+                    <td>@Model[i].Role</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="text-muted">Không có người dùng nào trong hệ thống.</p>
+}
+
+<a href="/" class="btn btn-secondary">Quay lại trang chủ</a>
