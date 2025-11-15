@@ -5,7 +5,6 @@ using SportsStore.Models;
 
 namespace SportsStore.Pages
 {
-    [Authorize] 
     public class CartModel : PageModel
     {
         private IStoreRepository repository;
