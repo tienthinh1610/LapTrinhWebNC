@@ -17,6 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+<<<<<<< HEAD
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
@@ -26,6 +27,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+=======
+>>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
@@ -34,4 +37,8 @@
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 607b160783a639cf95a18df2d91ab140a3189446

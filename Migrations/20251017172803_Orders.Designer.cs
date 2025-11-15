@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportsStore.Models;
 
@@ -11,23 +12,17 @@ using SportsStore.Models;
 namespace SportsStore.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251017172803_Orders")]
+    partial class Orders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-<<<<<<< HEAD
-                .HasAnnotation("ProductVersion", "8.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-=======
                 .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
 
             modelBuilder.Entity("SportsStore.Models.CartLine", b =>
                 {
@@ -35,11 +30,7 @@ namespace SportsStore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartLineID"));
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartLineID"), 1L, 1);
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
 
                     b.Property<int?>("OrderID")
                         .HasColumnType("int");
@@ -65,11 +56,7 @@ namespace SportsStore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderID"));
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderID"), 1L, 1);
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -96,12 +83,6 @@ namespace SportsStore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<bool>("Shipped")
-                        .HasColumnType("bit");
-
-=======
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -120,11 +101,7 @@ namespace SportsStore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-<<<<<<< HEAD
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long?>("ProductID"));
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long?>("ProductID"), 1L, 1);
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
 
                     b.Property<string>("Category")
                         .IsRequired()
@@ -139,11 +116,7 @@ namespace SportsStore.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-<<<<<<< HEAD
-                        .HasColumnType("decimal(8, 2)");
-=======
                         .HasColumnType("decimal(8,2)");
->>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
 
                     b.HasKey("ProductID");
 

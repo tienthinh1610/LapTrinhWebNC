@@ -1,4 +1,5 @@
 @page
+<<<<<<< HEAD
 @model SportsStore.Pages.CompletedModel
 
 <div class="text-center">
@@ -7,3 +8,15 @@
     <p>We'll ship your goods as soon as possible.</p>
     <a class="btn btn-primary" asp-controller="Home">Return to Store</a>
 </div>
+=======
+<div class="text-center">
+    <h2>Thanks!</h2>
+    <p>Thanks for placing order #@OrderId</p>
+    <p>We'll ship your goods as soon as possible.</p>
+    <a class="btn btn-primary" asp-controller="Home">Return to Store</a>
+</div>
+@functions {
+    [BindProperty(SupportsGet = true)]
+    public string? OrderId { get; set; }
+}
+>>>>>>> 607b160783a639cf95a18df2d91ab140a3189446
